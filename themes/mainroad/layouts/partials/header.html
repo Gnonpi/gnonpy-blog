@@ -11,13 +11,12 @@
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
 {{ if .RSSLink }}<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }} Feed" href="{{ .RSSLink }}">{{ end }}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" type="text/css" media="all" />
-<link rel="stylesheet" href="{{ "static/css/style.css" | relURL }}" type="text/css" media="all" />
-<script type="text/javascript" src="{{ "static/js/scripts.js" | relURL }}"></script>
+<link rel="stylesheet" href="{{ "css/style.css" | relURL }}" type="text/css" media="all" />
+<script type="text/javascript" src="{{ "js/scripts.js" | relURL }}"></script>
 <link rel="shortcut icon" href="{{ "img/favicon.ico" | relURL }}">
 {{ template "_internal/google_analytics_async.html" . }}
 </head>
 <body class="body {{ if (.Site.Params.leftsidebar) or (.Params.leftsidebar) }}body-left-sidebar{{ else }}body-right-sidebar{{ end }} mobile" itemscope="itemscope" itemtype="http://schema.org/WebPage">
-	<p>{{ "js/scripts.js" | relURL }}</p>
 	<div class="container container-outer">
 		<header class="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
 			<div class="container container-inner clearfix">

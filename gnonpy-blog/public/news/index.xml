@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>News on Gnonpy</title>
+    <link>http://example.org/news/</link>
+    <description>Recent content in News on Gnonpy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 06 Aug 2017 00:17:43 +0200</lastBuildDate>
+    
+	<atom:link href="http://example.org/news/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Blog_creation</title>
+      <link>http://example.org/news/blog_creation/</link>
+      <pubDate>Sun, 06 Aug 2017 00:17:43 +0200</pubDate>
+      
+      <guid>http://example.org/news/blog_creation/</guid>
+      <description>Hey !
+This blog was created !</description>
+    </item>
+    
+  </channel>
+</rss>

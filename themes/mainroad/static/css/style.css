@@ -1156,12 +1156,9 @@ textarea {
 }
 
 /*Added by Gnonpi*/
-pre {
-  background-color: #333;
-}
-code {
-  background-color: #EEE
-}
+/*code {
+  background-color: #272822
+}*/
 #search_magnifier {
 	margin-top: 1%;
 	height: 7%;

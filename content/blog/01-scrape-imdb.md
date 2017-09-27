@@ -69,7 +69,7 @@ Without further do, let's start!
 
 So let's write our first piece of code to scrape a page.
 
-```python
+{{< highlight python >}}
 import requests
 from bs4 import BeautifulSoup
 
@@ -82,7 +82,7 @@ soup = BeautifulSoup(html, 'html.parser')
 # Accessing one element from the soup object
 title = soup.find('h1', {'itemprop': 'name'}).text
 print(title)
-```
+{{< /highlight >}}
 
 What we did here was first downloading the HTML of the webpage using [Request](http://docs.python-requests.org/en/master/)
 Then, we create a __BeautifulSoup__ object that has parsed the HTML content
@@ -111,7 +111,7 @@ Ok that's nice, but it has 2 problems :
     In our case, I'm thinking about cases where data is missing
     (it happen a lot with old movie pages).
 
-```python
+{{< highlight python >}}
 import requests
 from bs4 import BeautifulSoup
 
@@ -131,7 +131,7 @@ if __name__ == "__main__":
     soup = get_soup_from_url(URL_GODFATHER)
     result_godfather = scrape_movie_title(soup)
     print(result_godfather)
-```
+{{< highlight >}}
 
 ## Going one step further
 

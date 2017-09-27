@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "http://www.gnonpy.com/"
 languageCode = "en-us"
 title = "Gnonpy"
 theme = "mainroad"
@@ -10,7 +10,7 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 markup = "markdown"
 # pygmentsUseClasses = false
 pygmentsStyle = "monokai"
-pygmentsCodeFencesGuessSyntax = false
+# pygmentsCodeFencesGuessSyntax = false
 pygmentsCodeFences = true
 
 [Author]

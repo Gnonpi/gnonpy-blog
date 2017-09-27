@@ -92,9 +92,9 @@ you can find the place where your data is.
 In this snippet, I'm accessing the `div` tag
 with the property `class` equal to `originalTitle`.
 That means that there is a line in the HTML code that goes :
-```html
+{{< highlight html >}}
 <h1 class="" itemprop="name">The Godfather</h1>
-```
+{{< /highlight >}}
 
 Why the `.text` ?
 It's because with `soup` you can access all the fields of a tag :
@@ -131,7 +131,7 @@ if __name__ == "__main__":
     soup = get_soup_from_url(URL_GODFATHER)
     result_godfather = scrape_movie_title(soup)
     print(result_godfather)
-{{< highlight >}}
+{{< /highlight >}}
 
 ## Going one step further
 

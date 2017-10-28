@@ -1,4 +1,4 @@
-baseURL = "http://www.sentry-duck-75340.netlify.com"
+baseURL = "https://sentry-duck-75340.netlify.com/"
 languageCode = "en-us"
 title = "Gnonpy"
 theme = "mainroad"

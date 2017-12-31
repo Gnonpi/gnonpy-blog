@@ -1,12 +1,10 @@
 ---
-title: "Scraping Imdb"
+title: "Scraping Imdb - scraping"
 date: 2017-09-16T23:13:43+02:00
-draft: false
+draft: true
 disable_comments: false
 categories: ["python"]
 ---
-[//TODO]: <> (Find date Amazon buying IMDB)
-[//TODO]: <> (Precise the version of the code+where to find it)
 [//TODO]: <> (Time the scraping function and how many pages in IMDB)
 [//TODO]: <> (Time the different parts of the program)
 
@@ -27,7 +25,7 @@ but we'll go one step at a time.
 
 [IMDB](http://www.imdb.com/) is the Internet Movie DataBase,
 an online database with info related to movies, television shows, actors.
-It's been bought by _Amazon_ in *d*.
+It's been bought by _Amazon_ in 1998.
 It contains more than 4.5 million titles
 and 8.1 million personalities.
 
@@ -51,6 +49,8 @@ Plus, scraping is not really complicated and
 I think it's a good skill to have.
 
 ## So, how do we do this ?
+
+**Code** : the code used is avaiable at [my Github](https://github.com/Gnonpi).
 
 Well, I want to show you 2 things in this post :
 

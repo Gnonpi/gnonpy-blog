@@ -2,7 +2,7 @@
 title: "Scraping Imdb - scraping"
 date: 2017-09-16T23:13:43+02:00
 draft: true
-disable_comments: false
+disable_comments: true
 categories: ["python"]
 ---
 [//TODO]: <> (Time the scraping function and how many pages in IMDB)

@@ -4,7 +4,6 @@ date: 2018-10-10T19:29:43+02:00
 share: false
 draft: false
 ---
-# PyConFr 2018
 
 Je suis allé a la PyConFr ces 4 derniers jours.
 Histoire de garder une trace, je vais essayer de résumer un peu ce que j'y ai fait, ce que j'ai vu.

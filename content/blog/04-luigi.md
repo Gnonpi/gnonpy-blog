@@ -1,15 +1,16 @@
 ---
 title: "Working with Luigi"
 date: 2017-12-30T15:14:30+02:00
-draft: false
+draft: true
 disable_comments: false
 categories: ["python"]
 ---
-# Luigi for data-science
-[//TODO]: <> (pictures of luigi and stuff)
+
+![Luigi](https://luigi.readthedocs.io/en/stable/_static/luigi.png)
+
 [//TODO]: <> (pass loaddataset task to externaltask)
 
-**Luigi**(link to luigi) is a workflow manager created by Spotify.
+[**Luigi**](https://github.com/spotify/luigi) is a workflow manager created by Spotify.
 It is written completely in Python and is, to my opinion, a great way to do better data-science.
 
 In this article, I'll try to show you why by working on a simple example:
@@ -45,7 +46,7 @@ We'll see how it goes in the code later.
 ### Cutting down our process
 Now, your problem can almost always be formulated with the 2 classes we saw.
 Let's see how it goes with Iris:
-![Tasks example](/blog/04-luigi/tasks-target.png)
+![Tasks example](blog/04-luigi/tasks-target.png)
 
 Simple enough, we download/parse the dataset in *LoadDataset*,
 producing a CSV as Target,
@@ -95,16 +96,16 @@ So a Task in Luigi has always 3 methods:
     Multiple questions here:
 
     * how do I know a Task is complete?
-    [//TODO]: <> (is complete inherited)
-        two possibilities ; either a Task can implement a `.complete` method that
-        does precisely that or the Task will check that its output exist,
-        if it does, it's considered complete.
+        the base Task has a `.complete` method.
+        It will check that every subjacent task is complete, and that its output exists.
+        You can of course re-implement that
+        method for your own use.
 
     * in what order are they going to be checked/executed?
-    [//TODO]: <> (loop are checked)
         let's first remind that the task graph is acyclic, no loop are expected.
-        then, the `list`, `tuple`, `dict` you return from `.requires` will
-        be flattened.
+        Then, the `list`, `tuple`, `dict` (an iterable) you return from `.requires` will transformed
+        into a list by iterating on it.
+        So the order on which the items will be iterated on is the order of execution.
 
 * `run` contains the logic of your Task.
     You can see here that I can access the output of the Tasks
@@ -117,13 +118,13 @@ So a Task in Luigi has always 3 methods:
 With just the part above, you are able to create your own pipeline.
 However, I would like to show you here two elements that I find useful.
 
-[//TODO]: <> (change code to Path and pathlib)
 ```python
 class PathConfig(luigi.Config):
-    iris_url = luigi.Parameter(default='http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data')
+    iris_url =  luigi.Parameter(default='http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data')
     iris_csv = luigi.Parameter(default='iris.csv')
     pipeline_line = luigi.Parameter(default='pipeline-result.txt')
 ```
+
 **Config** is a must to keep track of all the parameters you use in your program.
 You can use subclasses of Parameter to check the type of the variable you introduce.
 I personnaly always have something like this _PathConfig_ to hold all the filepath I use.

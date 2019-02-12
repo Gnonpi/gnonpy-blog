@@ -1,7 +1,8 @@
 Title: PyConFr 2018
-Slug: pyconfr-2018
+Slug: pyconfr2018
 Date: 2018-10-10T19:29:43+02:00
 Category: News
+Lang: fr
 Status: published
 
 Je suis allé a la PyConFr ces 4 derniers jours.

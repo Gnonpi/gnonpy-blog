@@ -109,7 +109,7 @@
                             {% for author in article.authors %}
                                 <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
                             {% endfor %}
-                             on {{ article.locale_date }}
+                             on {{ article.date }}
                         </span>
                         {% if article.modified %}
                             <span class="meta">Updated on {{ article.locale_modified }}</span>

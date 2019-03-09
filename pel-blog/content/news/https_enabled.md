@@ -1,5 +1,5 @@
 Title: Https enabled
-Slug: moving-to-pelican
+Slug: https-enabled
 Date: 2018-10-28T16:47:08+01:00
 Category: News
 Lang: en

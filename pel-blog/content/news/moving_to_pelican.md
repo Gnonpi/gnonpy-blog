@@ -21,6 +21,8 @@ I want to have something to quickly share thoughts
 all while not having to always worry about my systems up and running.
 A static website generator that reads markdown is perfect for me.
 
+![Isso]({static}/images/wynaut.jpeg)
+
 However, I want to share and receive feedback.
 Last post (4 months ago, I should really write more),
 I was thinking about using [Isso](https://posativ.org/isso/)

@@ -62,7 +62,7 @@
         {% endfor %}
 	<meta property="og:url" content="{{ SITEURL }}/{{ article.url }}">
 	<meta property="og:title" content="{{ article.title|striptags }}">
-	<meta property="article:published_time" content="{{ article.date }}">
+	<meta property="article:published_time" content="{{ article.date.strftime('%Y-%m-%d') }}">
         {% if description %}
             <meta property="og:description" content="{{ description }}">
         {% elif article.headline %}
@@ -109,7 +109,7 @@
                             {% for author in article.authors %}
                                 <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
                             {% endfor %}
-                             on {{ article.date }}
+                             on {{ article.date.strftime('%Y-%m-%d') }}
                         </span>
                         {% if article.modified %}
                             <span class="meta">Updated on {{ article.locale_modified }}</span>

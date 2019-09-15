@@ -45,7 +45,7 @@ Of course, I ended up with problems having multiple projects with conflicting ve
 So, I searched a better way to do isolate my Python dependencies.
 And of course, I arrived to [virtualenv](https://virtualenv.pypa.io/en/latest/).
 
-Virtualenv create a folder in which the dependencies you install go,
+Virtualenv create a folder where the dependencies you install go,
 and ensure they don't go outside that folder.
 It ships a link to a Python in your system (but only use it to execute stuff)
 and a Pip binary.
@@ -61,7 +61,7 @@ $ which python
 # tadaaa! we can now do pip install, it'll install in my_venv folder
 ```
 
-Ot's so widely used, that it has been integrated in stdlib as the `venv` module ([attention, it's not exactly the same thing](https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe)).
+It's so widely used, that it has been integrated in stdlib as the `venv` module ([attention, it's not exactly the same thing](https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe)).
 
 So you can even use it with a basic Python installing:
 ````
@@ -72,7 +72,7 @@ but you cannot pass the path to a Python binary like earlier 🙃
 ## Virtualenvs as toolbox
 
 One cool thing,
-you can use things inside virtualenv without activating it.
+you can use things that are inside your virtualenv without activating it.
 For example:
 ```shell
 $ virtualenv my_venv
@@ -116,7 +116,7 @@ you can prepend it with `pipenv run` to run in it the virtualenv
   <img alt="View of pipenv" src="{static}/images/pipenv.png">
 </p>
 
-You can easily share the Pipfile in your version control
+You can share the Pipfile in your version control system
 for your colleagues to easily run your code.
 For small tasks or bigger projects,
 just having to do a `pipenv install` followed by a `pipenv run python <something>`
@@ -130,7 +130,7 @@ I started using Pipenv at my job,
 first on pure data-science problems where I typicaly only had to produce a result file (csv or other)
 and then for a service.
 
-At the beginning, all was fine.
+At the beginning, everything was fine.
 But as we used more and more pipenv,
 we started to see some of its limitations:
 
@@ -138,7 +138,7 @@ we started to see some of its limitations:
 With a kinda big project, it started to last around 10 minutes to install everything.
 Since deploys meant to reinstall dependencies
 (we thought that it would be the safest and painless way to do),
-quickly `pipenv install` became our bottleneck.
+quickly `pipenv install` became our main bottleneck.
 - some dependencies randomly broke it.
 This meant that if you didn't pin versions to minor
 (we learned that the hard way, for an application **pin carefully what version you want to use**),
@@ -176,8 +176,7 @@ you can do `poetry run <command>` to run it in the virtualenv.
 So it's as easy to use as Pipenv.
 
 What I like about Poetry is that it's not trying to reinvent the wheel,
-it's reusing a lot of existing tools with close to no modifications
-(as I'm writing this the '_vendor' folder of Poetry is empty).
+it's reusing a lot of existing tools with close to no modifications.
 Eustace always put good thinking into how he approach his projects
 and (I think) that decision of reusing elements is a plus for Poetry.
 
@@ -192,11 +191,11 @@ with the same machine, from a raw installation:
 - Poetry: **1min11s**
 
 Seeing that, we were pretty pleased!
-Here goes our bottleneck!
+We were finally saying goodbye to our bottleneck!
 
 #### Creating libraries
 
-One other point where Poetry facilitate your dev life
+One other point where Poetry facilitated our dev lives
 is when working with libraries.
 Pipenv is made with applications in mind
 while Poetry is more flexible 
@@ -253,18 +252,18 @@ I've noticed some things:
 
 - having to have the right Python version installed in the same system is still a constraint
 - the pex file is really lightweight compared to full virtualenv (I think it's because virtualenv ship more things than pex, like *pip*, *easy_install* and *setuptools*)
-- having the virtualenv activation in a file instead of using an *activate.sh* feels natural
+- having the virtualenv activation in a file instead of using an *activate.sh* feels more natural
 - I think you can do some cool things with Python subprocesses that use different dependencies than the parent process
 
 I'm eager to see what pex can do
-but I would personally wait a few more months before using it in production.
+but I will personally experiment a bit more with it before using it in production.
 
 ## A word about pyenv and dephell
 
 ### pyenv: Python version manager
 
 [pyenv](https://github.com/pyenv/pyenv) allow you to have multiple Python versions
-in your system (for example 2.7 - 3.6 - pypy3.6).
+in your system (for example Cpython 2.7 - Cpython 3.6 - pypy3.6).
 If you've done some NodeJS, it's exactly the same as [nvm](https://github.com/nvm-sh/nvm).
 
 I finally installed it in all my laptops 
@@ -287,7 +286,7 @@ From my experience, and what I saw:
 Some recommendations:
 
 - Always use at least a virtualenv: 
-it will say you a lot of trouble
+it will save from you a lot of troubles
 - Use pyenv in your dev laptop:
 I didn't expand on it, but it's a must
 - Use poetry if you can:

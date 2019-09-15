@@ -52,3 +52,12 @@ DEFAULT_METADATA = {
 }
 
 # Plugins
+PLUGIN_PATHS = ['./pelican-plugins/']
+PLUGINS = ['yuicompressor']
+
+## Gzip Cache: turn everything into .gz
+# GZIP_CACHE_OVERWRITE = True
+
+## YuiCompressor: minifies CSS/JS
+YUICOMPRESSOR_EXECUTABLE = 'yuicompressor'
+

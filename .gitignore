@@ -1,3 +1,6 @@
 public*
 .idea
 config/*
+venv/*
+nginx/
+pelican-plugins/

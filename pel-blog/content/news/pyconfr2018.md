@@ -127,12 +127,8 @@ Premiere remarque:
 beaucoup étaient en anglais.
 Si c'est génial sur un plan d'ouverture au monde
 d'utiliser la lingua franca de l'informatique,
-il n'empêche que certains speakers ne la maîtrisaient pas suffisamment pour
-pouvoir donner une présentation fluide et agréable à écouter.
-Pas la majorité, pas inintelligible
-mais pas top non plus.
-Mais je suis très mauvais public doublé d'un immense connard,
-à voir le ressenti d'autres participants.
+cela manquait parfois de fluidité.
+C'est dommage quand le sujet était intéressant.
 
 Deuxieme remarque:
 j'ai essayé de ne pas aller que aux talks de data et de tests,

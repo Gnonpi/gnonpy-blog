@@ -99,7 +99,7 @@ However,  they are some limits:
 - you have to activate the virtualenv in every shell
 
 To try and improve the situation,
-Kenneith Ritz came up with **[Pipenv](https://docs.pipenv.org/en/latest/)**.
+Kenneth Reitz came up with **[Pipenv](https://docs.pipenv.org/en/latest/)**.
 It's simple:
 
 1. you install pipenv in your system ([link to docs](https://docs.pipenv.org/en/latest/install/)),
@@ -153,7 +153,7 @@ while libraries require abstract dependencies:
 it is very well explained [here](https://docs.pipenv.org/en/latest/advanced/#pipfile-vs-setup-py).
 
 On top of that,
-the controversies around Kenneith Ritz behaviour and the tone used when responding to issues on github
+the controversies around Kenneth Reitz behaviour and the tone used when responding to issues on github
 lead us to start thinking that maybe it was time to look for another solution.
 
 ## Poetry, a good solution
